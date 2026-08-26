@@ -1,0 +1,129 @@
+/* INDICE DE ESTILOS
+
+0. Generales / colores
+1. Tipografía
+2. Header / cabecera
+3. Enlaces / botones
+4. Areas destacadas
+
+*/
+
+
+/* 0. Generales / colores */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-principal: rgb(20, 130, 189);
+    --color-acento: rgb(36, 248, 167);
+    --color-tercer: rgb(196, 44, 74);
+    --color-texto: rgb(32, 35, 36);
+}
+
+/* 1. tipografía */
+
+.titulo-principal{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    color: var(--color-principal);
+}
+
+.titulo-secundario{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    color: var(--color-principal);
+}
+
+.parrafo{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--color-texto)
+}
+
+.texto-oculto{
+    display: none;
+}
+
+
+
+/* 2. Header / cabecera */
+
+#cabecera-principal{
+    padding: 16px 18px 16px 18px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* borde: grosor tipo color */
+    border-bottom: 3px solid var(--color-principal);
+}
+
+/* 3. Enlaces / botones */
+.boton-principal{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--color-principal);
+    /* quito la linea inferior */
+    text-decoration: none;
+    /* asigno cuerpo por medio del relleno */
+    padding: 8px 12px 8px 12px;
+    /* animo el paso del mouse */
+    transition: all linear 0.3s;
+    /* redondeo los bordess */
+    border-radius: 8px;
+}
+
+.boton-principal:hover{
+    color: rgb(255, 255, 255);
+    background-color:  var(--color-principal);
+}
+
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+    #cabecera-principal {
+        flex-direction: column;
+    }
+
+        /* Enlaces / botones */
+    nav[role=navigation]{
+        width: 100%;
+    }
+
+    .boton-principal {
+        /* se comporte como un bloque */
+        display: block;
+        /* ancho */
+        width: 96%;
+        /* margen */
+        margin: 5% 2% 0 2%;
+        /* alineo al centro */
+        text-align: center;
+        /* borde inferio */
+        border-bottom: 1px solid var(--color-principal);
+        /* quito borde */
+        border-radius: 0;
+    }
+}
+
+
+/* Areas destacadas */
+#area-destacadas div{
+    display: flex;
+}
