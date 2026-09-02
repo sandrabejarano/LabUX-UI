@@ -5,6 +5,7 @@
 2. Header / cabecera
 3. Enlaces / botones
 4. Areas destacadas
+5. Area experiencias (video)
 
 */
 
@@ -24,6 +25,18 @@
     --color-texto: rgb(32, 35, 36);
 }
 
+img{
+    width: 100%;
+
+}
+
+.elements-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 /* 1. tipografía */
 
 .titulo-principal{
@@ -32,6 +45,16 @@
     font-style: normal;
     font-size: 28px;
     color: var(--color-principal);
+    text-align: center;
+}
+
+.titulo-principal2{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    color: white;
+    text-align: center;
 }
 
 .titulo-secundario{
@@ -68,7 +91,10 @@
     border-bottom: 3px solid var(--color-principal);
 }
 
+
+
 /* 3. Enlaces / botones */
+
 .boton-principal{
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 600;
@@ -89,6 +115,60 @@
     color: rgb(255, 255, 255);
     background-color:  var(--color-principal);
 }
+
+
+
+/* 4. Areas destacadas */
+
+#area-destacadas{
+    padding: 50px 0;
+}
+
+.articulo-index{
+    /* relleno: top right bottom left */
+    padding: 20px;
+    
+}
+
+.articulo-index *{
+    margin: 0 0 10px 0;
+}
+
+.boton-ver-mas{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--color-principal);
+    text-decoration: none;
+    padding: 6px 10px 6px 0;
+    transition: all linear;
+    border-radius: 3px;
+}
+
+.boton-ver-mas:hover{
+    color: white;
+    background-color:  var(--color-principal);
+    padding: 6px 10px 6px 10px;
+    transition: all linear 0.3s;
+}
+
+
+
+/* 5. Area experiencias (video) */
+
+#area-experiencias{
+    padding: 80px 0;
+    background: url(assets/fondo-buenosaires.png) center center no-repeat rgb(0, 0, 0);
+    background-size: cover;
+}
+
+#area-experiencias video{
+    margin: 30px 5%;
+}
+
+
+
 
 
 
@@ -120,10 +200,9 @@
         /* quito borde */
         border-radius: 0;
     }
-}
-
-
-/* Areas destacadas */
-#area-destacadas div{
-    display: flex;
+    
+    .elements-row{
+        flex-direction: column;
+        align-items: center;
+    }
 }
