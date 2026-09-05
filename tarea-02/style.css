@@ -6,6 +6,8 @@
 3. Enlaces / botones
 4. Areas destacadas
 5. Area experiencias (video)
+6. Sección de destacados
+7. Sección de ubicación
 
 */
 
@@ -21,15 +23,18 @@
 }
 
 :root {
-    --color-principal: rgb(130, 19, 19);
-    --color-acento: rgb(2, 43, 119);
+    --color-principal: rgb(235, 0, 0);
+    --color-acento: rgb(0, 61, 175);
     --color-tercer: rgb(160, 200, 78);
     --color-texto: rgb(32, 35, 36);
 }
 
-.elements-row{
-    display: flex;
-    justify-content: space-around;
+body {
+    background: url(assets/fondo-santiagodechile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -38,28 +43,129 @@
 /* 1. tipografía */
 
 .titulo-principal {
-    font-family: "Wendy One", sans-serif;
-    font-weight: 400;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 50px;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+.titulo-principal1 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.titulo-principal2 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 30px;
+    color: var(--color-tercer);
+    text-align: center;
+    margin-bottom: 14px;
+    text-decoration: underline;
+}
+
+.titulo-principal3 {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
     font-style: normal;
     font-size: 30px;
     color: var(--color-principal);
     text-align: center;
+    margin-bottom: 14px;
+
 }
+
 
 .titulo-secundario {
     font-family: "Kulim Park", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 22px;
-    color: var(--color-acento);
+    color: white;
+    text-align: center;
+}
+
+.titulo-secundario1 {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: var(--color-principal);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.titulo-secundario2 {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+.subtitulo {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.subtitulo4 {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    margin-bottom: 8px;
 }
 
 .parrafo {
     font-family: "Kulim Park", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    font-size: 14px;
-    color: var(--color-texto)
+    font-size: 17px;
+    text-align: center;
+    color: white
+    
+}
+
+.parrafo4 {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    text-align: left;
+    color: rgb(182, 201, 255);
+    padding-left: 40px;
+}
+
+.parrafo4 a {
+    color: rgb(182, 213, 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 4px 0;
+    transition: all 0.2s ease;
+}
+
+.parrafo4 a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .texto-oculto {
@@ -72,13 +178,19 @@
 /* 2. Header / cabecera */
 
 #cabecera-principal {
-    padding: 10px 18px 10px 18px;
+    padding: 10px 18px 20px 18px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* Añade separación constante entre los elementos horizontal y verticalmente */
+    gap: 16px;
     justify-content: space-between;
     align-items: center;
     /* borde: grosor tipo color */
-    border-bottom: 3px solid var(--color-principal);
+    background: linear-gradient(
+        to bottom,
+        rgb(171, 228, 255),
+        rgba(255, 255, 255, 0)
+    );
 }
 
 
@@ -88,10 +200,10 @@
 
 .boton-principal {
     font-family: "Kulim Park", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    font-size: 20px;
-    color: var(--color-principal);
+    font-size: 16px;
+    color: white;
     /* quito la linea inferior */
     text-decoration: none;
     /* asigno cuerpo por medio del relleno */
@@ -100,13 +212,14 @@
     transition: all linear 0.3s;
     /* redondeo los bordess */
     border-radius: 8px;
+    background-color: var(--color-acento);
 }
 
 .boton-principal:hover {
     font-family: "Kulim Park", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--color-principal);
     color: rgb(255, 255, 255);
     background-color:  var(--color-principal);
@@ -118,5 +231,267 @@
 /* 4. Areas destacadas */
 
 #area-destacadas{
-    padding: 50px 0;
+    max-width: 1500px;
+    padding: 60px 20px;
+    margin: 40px auto;
+    margin-bottom: 30px;
+    box-sizing: border-box;
 }
+
+.elements-row{
+    display: flex;
+    justify-content: space-around;
+    background-color: color-mix(in srgb, rgb(0, 22, 121) 80%, transparent);
+    border-top: 8px double rgb(255, 255, 255);
+    border-bottom: 12px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    border-radius: 60px;
+}
+
+.articulo-index{
+    /* relleno: top right bottom left */
+    padding: 30px 15px;
+    flex: 1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-align: center;
+    border-right: 6px solid rgb(15, 22, 85, 0.7);
+}
+
+.articulo-index img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    border-bottom: 8px solid rgb(255, 255, 255);
+}
+
+.articulo-index *{
+    margin: 0 0 10px 0;
+}
+
+.boton-ver-mas{
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--color-tercer);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    /* Convertimos el enlace en bloque de línea para que respete dimensiones */
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.boton-ver-mas:hover{
+    color: white;
+    background-color:  black;
+    transition: all linear 0.3s;
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+
+
+
+/* 5. Area experiencias (video) */
+
+#area-experiencias{
+    padding: 60px 0;
+}
+
+#area-experiencias video{
+    margin: 30px 5%;
+    border-radius: 20px;
+    border-bottom: 8px solid rgb(255, 255, 255);
+}
+
+
+
+
+/* 6. Sección de destacados */
+
+#seccion-destacados {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 0 20px 30px 40px;
+    box-sizing: border-box;
+}
+
+.mosaico-destacados {
+    display: grid;
+    /* Columna izquierda un poco más ancha */
+    grid-template-columns: 1.2fr 1fr; 
+     /* Dos filas de alto fijo */
+    grid-template-rows: repeat(2, 220px);
+    gap: 20px;
+}
+
+/* La tarjeta que la columna izquierda (de arriba a abajo) */
+.tarjeta-principal {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.tarjeta {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    /* Ajusta la imagen sin deformarla */
+    object-fit: cover;
+    display: block;
+    box-shadow: inset 0 -8px 0 0 #ffffff;
+}
+
+/* El texto resalta sobre cualquier foto */
+.contenido-tarjeta {
+    /* Hace flotar el texto sobre la iamgen */
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.boton-ver-mas1 {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--color-tercer);
+    border-radius: 20px;
+    transition: background 0.2s ease;
+}
+
+.boton-ver-mas1:hover {
+    background-color: var(--color-principal);
+}
+
+
+
+
+/* 7. Sección de ubicación */
+
+#seccion-mapa {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 80px 60px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+/* 8. Información prestadores */
+
+.lista-prestadores {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    gap: 80px;
+    padding: 40px 0 80px;
+    background-color: var(--color-acento);
+    border-radius: 25px 25px 0 0;
+    border-top: 8px solid rgb(255, 255, 255);
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+    #cabecera-principal {
+        flex-direction: column;
+    }
+
+
+        /* Enlaces / botones */
+    nav[role=navigation]{
+        width: 100%;
+    }
+
+    .boton-principal {
+        /* se comporte como un bloque */
+        display: block;
+        /* ancho */
+        width: 96%;
+        /* margen */
+        margin: 5% 2% 0 2%;
+        /* alineo al centro */
+        text-align: center;
+        /* borde inferio */
+        border-bottom: 1px solid var(--color-principal);
+        /* quito borde */
+        border-radius: 0;
+    }
+
+    .lista-prestadores {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .subtitulo4 {
+        text-align: center;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    .parrafo4 {
+        text-align: left;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .mosaico-destacados {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .tarjeta-principal {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .tarjeta {
+        height: 250px; /* Altura cómoda para ver en cel */
+    }
+    
+}
+
+
+@media only screen and (max-width: 900px){
+    .elements-row {
+        flex-direction: column;
+        align-items: center;
+        }
+
+    .articulo-index {
+    border-bottom: 12px solid rgb(15, 22, 85, 0.7);
+        }
+    }
