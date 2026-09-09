@@ -73,7 +73,6 @@ body {
     color: var(--color-principal);
     text-align: center;
     margin-bottom: 14px;
-    text-decoration: underline;
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -107,7 +106,6 @@ body {
     font-size: 28px;
     color: var(--color-principal);
     text-align: center;
-    text-decoration: underline;
 }
 
 .titulo-secundario2 {
@@ -284,22 +282,18 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 19px;
-    color: var(--color-acento);
+    color: white;
     text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 3px;
-    /* Convertimos el enlace en bloque de línea para que respete dimensiones */
     display: inline-block;
-    transition: all 0.3s ease;
-    text-align: center;
+    padding: 8px 16px;
+    background-color: var(--color-acento);
+    border-radius: 20px;
+    transition: background 0.2s ease;
 }
 
 .boton-ver-mas:hover{
-    color: var(--color-texto);
-    background-color:  rgb(255, 255, 255);
+    background-color: var(--color-principal);
     transition: all linear 0.3s;
-    cursor: pointer;
-    transform: translateY(-7px);
 }
 
 
